@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function sidebar() {
     return (
-        <div className='sidebar' >
+        <div className='side sidebar' >
             <div className='title' >
                 <h2 className='title-text' >Suivi de candidature</h2>
             </div>
