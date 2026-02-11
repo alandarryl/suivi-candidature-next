@@ -1,0 +1,12 @@
+
+
+export const URL = {
+    POST_CANDIDATURE: "",
+    GET_ALL_CANDIDATURE: "",
+    GET_ONE_CANDIDATURE: "",
+    UPDATE_ONE_CANDIDATURE: "",
+    DELETE_ONE_CANDIDATURE: "",
+};
+
+
+
