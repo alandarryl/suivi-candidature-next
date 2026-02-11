@@ -1,15 +1,35 @@
-import React from 'react';
-import { inputForm } from '@/utils/Urls';
+"use client";
+
+import React,  { useState } from 'react';
+import { inputForm } from '@/utils/formFields';
+import axios from "axios";
+import URL from '@/utils/Urls';
 
 function CandidatureForm() {
 
-    const handleChange = () =>{
+    const [formData, setFormData] = useState({})
+
+    const handleChange = (e) =>{
         //
+        const name = e.target.name;
+        const value = e.target.value;
+        setFormData({
+            ...formData,
+            [name]: value
+        })
     }
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         //
         e.preventDefault();
+        try {
+            const response = await axios.post(URL.POST_CANDIDATURE, formData);
+            console.log(response.data)
+        } catch (error) {
+            //
+            console.console.log(error);
+            
+        }
     }
 
     return (
@@ -19,9 +39,9 @@ function CandidatureForm() {
                 <div key={index} >
                     <label htmlFor={fields.id} >{fields.label} </label>
                     {fields.type === "select" ? (
-                        <select>
+                        <select name={fields.name} onChange={handleChange} >
                             {fields.options.map((option, index ) =>(
-                                <option key={index} value={option} > 
+                                <option key={index}value={option} > 
                                     {option} 
                                 </option>
                             ) )}
@@ -37,7 +57,7 @@ function CandidatureForm() {
                         ) }
                 </div>
             ))}
-            <button className="btn" >Envoyer<button>
+            <button className="btn" type="submit" >Envoyer</button>
         </form>
         </div>
     )

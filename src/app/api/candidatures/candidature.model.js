@@ -30,7 +30,7 @@ const CandidatureSchema = new mongoose.Schema(
             default: "En attente"
         }
     }, {
-        timeStamps: { createdAt: true}
+        timestamps: { createdAt: true}
     }
 );
 

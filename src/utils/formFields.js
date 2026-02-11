@@ -44,7 +44,7 @@ export const inputForm = [
     {
         label: 'Statut',
         type: 'select',
-        options: ["En attente", "Aceepté", "Refusé"],
+        options: ["En attente", "Acceptée", "Refusée"],
         name: 'statut',
         id: 'statut',
         placeholder: "Entrer le statut",

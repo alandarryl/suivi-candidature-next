@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {CandidatureForm} from "../"
 
 function page() {
     return (
