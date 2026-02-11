@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import CandidatureCard from '@/components/CandidatureCard';
 
 function page() {
     return (
-        <div>Liste des candidature</div>
+        <div>
+            <h2>Liste des candidature</h2>
+            <CandidatureCard/>
+        </div>
     )
 }
 

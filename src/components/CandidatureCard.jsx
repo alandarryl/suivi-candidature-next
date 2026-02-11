@@ -2,16 +2,18 @@
 
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
-import URL from "../utils/Urls"
+import {URL} from "../utils/Urls"
+import Link from "next/link";
+
 
 function CandidatureCard() {
 
-    const [candidatures, setCandidatures] = useState({});
+    const [candidatures, setCandidatures] = useState([]);
 
     const fetchData = async () =>{
         try {
             const {data} = await axios.get(URL.GET_ALL_CANDIDATURE);
-            setCandidatures(candidatures)
+            setCandidatures(data)
         } catch (error) {
             console.log(error);
         }
