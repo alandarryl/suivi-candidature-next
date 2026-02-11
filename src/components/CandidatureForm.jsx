@@ -3,7 +3,7 @@
 import React,  { useState } from 'react';
 import { inputForm } from '@/utils/formFields';
 import axios from "axios";
-import URL from '@/utils/Urls';
+import {URL} from '../utils/Urls';
 
 function CandidatureForm() {
 
@@ -27,7 +27,7 @@ function CandidatureForm() {
             console.log(response.data)
         } catch (error) {
             //
-            console.console.log(error);
+            console.log(error);
             
         }
     }
@@ -46,7 +46,7 @@ function CandidatureForm() {
                                 </option>
                             ) )}
                         </select>
-                     ):(
+                        ):(
                         <input
                             type={fields.type}
                             id={fields.id}
@@ -63,4 +63,4 @@ function CandidatureForm() {
     )
 }
 
-export default CandidatureForm
+export default CandidatureForm;

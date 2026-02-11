@@ -1,10 +1,13 @@
 import React from 'react';
-import {CandidatureForm} from "../"
+import CandidatureForm from "../../components/CandidatureForm";
 
 function page() {
     return (
-        <div>formulaire de candidature</div>
-  )
+        <div>
+        <h1>formulaire de candidature</h1>
+        <CandidatureForm/>
+        </div>
+    )
 }
 
 export default page;

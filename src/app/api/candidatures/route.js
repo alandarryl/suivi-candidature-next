@@ -8,6 +8,9 @@ export async function POST(req){
         //Etablie la connexion a mongoDB
         await connect();
 
+        //recuperer le corps de la requete
+        const body = await req.json();
+
         //Recupère le corps de la requete et le convertit en JSON
         const candidature = await candidatureModel.create(body);
 
@@ -30,7 +33,7 @@ export async function GET(req) {
 
         if(!candidatures) return NextResponse.json("There is no candidature found", {status: 404})
 
-        return NextResponse.json(candidatures, {status: 201});
+        return NextResponse.json(candidatures, {status: 200});
 
     } catch (error) {
         console.error(error);
