@@ -16,6 +16,8 @@ const connect = async () =>{
             dbName: process.env.DB_NAME,
         });
 
+        // console.log(process.env.DB_NAME);
+
         isConnected = conn.connections[0].readyState === 1;
         console.log("Mongo connected !");
 
