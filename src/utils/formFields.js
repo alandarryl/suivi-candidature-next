@@ -14,15 +14,15 @@ export const inputForm = [
         type: 'text',
         name: 'poste',
         id: 'poste',
-        plaveholder: "Entrer le nom de l'entreprise",
+        placeholder: "Entrer le nom de l'entreprise",
         icon: ""
     },
     {
         label: 'Lien',
         type: 'text',
-        name: 'poste',
-        id: 'poste',
-        plaveholder: "Entrer le lien de la candidature",
+        name: 'lien',
+        id: 'lien',
+        placeholder: "Entrer le lien de la candidature",
         icon: ""
     },
     {
@@ -30,7 +30,7 @@ export const inputForm = [
         type: 'date',
         name: 'dateEnvoi',
         id: 'dateEnvoi',
-        plaveholder: "Entrer la date d envoi de la candidature",
+        placeholder: "Entrer la date d envoi de la candidature",
         icon: ""
     },
     {
@@ -38,15 +38,16 @@ export const inputForm = [
         type: 'date',
         name: 'relance',
         id: 'relance',
-        plaveholder: "Entrer la date de relance",
+        placeholder: "Entrer la date de relance",
         icon: ""
     },
     {
         label: 'Statut',
         type: 'select',
+        options: ["En attente", "Aceepté", "Refusé"],
         name: 'statut',
         id: 'statut',
-        plaveholder: "Entrer le statut",
+        placeholder: "Entrer le statut",
         icon: ""
     }
 ];
