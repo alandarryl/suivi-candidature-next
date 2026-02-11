@@ -1,17 +1,19 @@
-
-body{
+* {
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  height: 100vh;
 }
 
-.side{
-  background: rebeccapurple;
+body {
+  min-height: 100vh;
+  color: #fff;
 }
 
-.main{
-  background: yellowgreen;
+.main-grid {
+  background: #333;
+  min-height: 100vh;
+  display: flex; /* bonus pour ton layout */
 }
-
-
