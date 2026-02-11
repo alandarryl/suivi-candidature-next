@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-dom";
+import Link from "next/link";
 
 
 function sidebar() {
@@ -9,9 +9,9 @@ function sidebar() {
                 <h2 className='title-text' >Suivi de candidature</h2>
             </div>
             <ul className='sidebar-links' >
-                <Link><li className='link-item' >Tableau de bord</li></Link>
-                <Link><li className='link-item' >Liste des candidature</li></Link>
-                <Link><li className='link-item' >Formulaire d'entrer de candidature</li></Link>
+                <Link href="./dashboard" ><li className='link-item' >Tableau de bord</li></Link>
+                <Link href="./candidatureListe" ><li className='link-item' >Liste des candidature</li></Link>
+                <Link href="./candidatureFormulaire" ><li className='link-item' >Formulaire d'entrer de candidature</li></Link>
             </ul>
         </div>
     )
